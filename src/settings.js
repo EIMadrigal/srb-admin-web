@@ -1,6 +1,6 @@
 module.exports = {
 
-  title: 'Vue Admin Template',
+  title: 'SRB Admin Management Platform',
 
   /**
    * @type {boolean} true | false
