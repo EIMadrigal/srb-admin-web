@@ -56,6 +56,36 @@ export const constantRoutes = [
   },
 
   {
+    path: '/core/point-level',
+    component: Layout,
+    redirect: '/core/point-level/list',
+    name: 'PointLevel',
+    meta: { title: 'Point Level Management', icon: 'el-icon-s-marketing' },
+    alwaysShow: true,
+    children: [
+      {
+        path: 'list',
+        name: 'PointLevelList',
+        component: () => import('@/views/core/point-level/list'),
+        meta: { title: 'Point Level List' }
+      },
+      {
+        path: 'create',
+        name: 'PointLevelCreate',
+        component: () => import('@/views/core/point-level/form'),
+        meta: { title: 'Create Point Level' }
+      },
+      {
+        path: 'edit/:id',
+        name: 'PointLevelEdit',
+        component: () => import('@/views/core/point-level/form'),
+        meta: { title: 'Edit Point Level' },
+        hidden: true
+      }
+    ]
+  },
+
+  {
     path: '/example',
     component: Layout,
     redirect: '/example/table',
