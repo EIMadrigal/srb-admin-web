@@ -7,8 +7,13 @@
       <el-table-column prop="pointEnd" label="Point End" />
       <el-table-column label="Action">
         <template slot-scope="scope">
+          <router-link :to="'/core/point-level/edit/' + scope.row.id" style="margin-right: 5px;">
+            <el-button type="primary" size="mini" icon="el-icon-edit">
+              Modify
+            </el-button>
+          </router-link>
           <el-button type="danger" size="mini" icon="el-icon-delete" @click="removeById(scope.row.id)">
-            delete
+            Delete
           </el-button>
         </template>
       </el-table-column>
